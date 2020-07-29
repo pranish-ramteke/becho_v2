@@ -177,7 +177,9 @@ class _HomePageState extends State<HomePage> {
           //Search Button
 
           IconButton(
-            onPressed: (){},
+            onPressed: (){
+              Navigator.of(context).pushNamed('/searchicon');
+            },
             icon: Icon(EvaIcons.searchOutline),
             iconSize: 30,
             color: Colors.black87,
@@ -446,7 +448,7 @@ class _HomePageState extends State<HomePage> {
             Navigator.of(context).pushNamed('/homepage');
           }
           if(index == 1){
-            Navigator.of(context).pushNamed('/signup');
+            Navigator.of(context).pushNamed('/category_page');
           }
           if(index == 2){
             Navigator.of(context).pushNamed('/signup');

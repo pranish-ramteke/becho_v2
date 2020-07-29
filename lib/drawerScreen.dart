@@ -12,7 +12,7 @@ class _DrawerScreenState extends State<DrawerScreen> {
       decoration: BoxDecoration(
         color: Color(0xFFfccf3e),
       ),
-      padding: EdgeInsets.only(top:50,bottom: 70,left: 0),
+      padding: EdgeInsets.only(top: 50, bottom: 70, left: 0),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.start,
         children: [
@@ -22,7 +22,7 @@ class _DrawerScreenState extends State<DrawerScreen> {
               Padding(
                 padding: const EdgeInsets.fromLTRB(45, 5, 0, 10),
                 child: InkWell(
-                  onTap: (){
+                  onTap: () {
                     Navigator.of(context).pushNamed('/profile');
                   },
                   child: CircleAvatar(
@@ -33,58 +33,61 @@ class _DrawerScreenState extends State<DrawerScreen> {
               ),
             ],
           ),
-
           Padding(
             padding: const EdgeInsets.fromLTRB(20, 10, 0, 0),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.start,
               children: [
                 InkWell(
-                    child: Text('Pranish Ramteke', style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontSize: 20),
-                    ),
-                  onTap: (){
-                      Navigator.of(context).pushNamed('/profile');
+                  child: Text(
+                    'Pranish Ramteke',
+                    style: TextStyle(
+                        color: Colors.white,
+                        fontWeight: FontWeight.bold,
+                        fontSize: 20),
+                  ),
+                  onTap: () {
+                    Navigator.of(context).pushNamed('/profile');
                   },
                 ),
               ],
             ),
           ),
-
           SizedBox(height: 20),
           Divider(thickness: 1, color: Color(0xFFff6f00)),
           SizedBox(height: 10),
-
           Padding(
             padding: const EdgeInsets.only(left: 20.0),
             child: Row(
               children: [
-                Text('Your Orders', style: TextStyle(
-                  color:Color(0xFFff6f00),
-                  fontWeight: FontWeight.bold,
-                  fontSize: 15,
-                ),),
-              ],
-            ),
-          ),
-
-          SizedBox(height: 15.0),
-
-          Padding(
-            padding: const EdgeInsets.only(left: 20.0),
-            child: Row(
-              children: [
-                Text("Today's offers", style: TextStyle(
-                    color:Color(0xFFff6f00),
+                Text(
+                  'Your Orders',
+                  style: TextStyle(
+                    color: Color(0xFFff6f00),
                     fontWeight: FontWeight.bold,
-                    fontSize: 15
-                ),),
+                    fontSize: 15,
+                  ),
+                ),
               ],
             ),
           ),
-
+          SizedBox(height: 15.0),
+          Padding(
+            padding: const EdgeInsets.only(left: 20.0),
+            child: Row(
+              children: [
+                Text(
+                  "Today's offers",
+                  style: TextStyle(
+                      color: Color(0xFFff6f00),
+                      fontWeight: FontWeight.bold,
+                      fontSize: 15),
+                ),
+              ],
+            ),
+          ),
           SizedBox(height: 10),
           Divider(thickness: 1, color: Color(0xFFff6f00)),
-
           Row(
             children: [
               Padding(
@@ -93,8 +96,6 @@ class _DrawerScreenState extends State<DrawerScreen> {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text('Fashion', style: TextStyle(fontSize: 15)),
-                    SizedBox(height: 10),
-                    Text('Electronics', style: TextStyle(fontSize: 15)),
                     SizedBox(height: 10),
                     Text('Books', style: TextStyle(fontSize: 15)),
                     SizedBox(height: 10),
@@ -113,7 +114,6 @@ class _DrawerScreenState extends State<DrawerScreen> {
           ),
           Divider(thickness: 1, color: Color(0xFFff6f00)),
           SizedBox(height: 15),
-
           Row(
             children: [
               Padding(
@@ -121,11 +121,51 @@ class _DrawerScreenState extends State<DrawerScreen> {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text('Your Account', style: TextStyle(fontSize: 15, color: Color(0xFFff6f00), fontWeight: FontWeight.bold)),
+                    InkWell(
+                      child: Text(
+                        'WishList',
+                        style: TextStyle(
+                            fontSize: 15,
+                            color: Color(0xFFff6f00),
+                            fontWeight: FontWeight.bold),
+                      ),
+                    ),
                     SizedBox(height: 10),
-                    Text('WishList', style: TextStyle(fontSize: 15, color: Color(0xFFff6f00), fontWeight: FontWeight.bold)),
+                    InkWell(
+                      child: Text(
+                        'Notifications',
+                        style: TextStyle(
+                            fontSize: 15,
+                            color: Color(0xFFff6f00),
+                            fontWeight: FontWeight.bold),
+                      ),
+                      onTap: () {
+                        Navigator.of(context).pushNamed('/notifications_page');
+                      },
+                    ),
                     SizedBox(height: 10),
-                    Text('Notifications', style: TextStyle(fontSize: 15, color: Color(0xFFff6f00), fontWeight: FontWeight.bold)),
+                    InkWell(
+                      child: Text(
+                        'FAQ',
+                        style: TextStyle(
+                            fontSize: 15,
+                            color: Color(0xFFff6f00),
+                            fontWeight: FontWeight.bold),
+                      ),
+                      onTap: (){
+                        Navigator.of(context).pushNamed('/faq');
+                      },
+                    ),
+                    SizedBox(height: 10),
+                    InkWell(
+                      child: Text(
+                        'Settings',
+                        style: TextStyle(
+                            fontSize: 15,
+                            color: Color(0xFFff6f00),
+                            fontWeight: FontWeight.bold),
+                      ),
+                    ),
                   ],
                 ),
               ),

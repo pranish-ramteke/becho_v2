@@ -131,8 +131,9 @@ class ProfilePage extends StatelessWidget {
                   subtitle: Text('Questions and Answer'),
                   leading: Image.asset('Assets/faq.png'),
                   trailing: Icon(Icons.chevron_right, color: Color(0xFFff6f00)),
-//                  onTap: () => Navigator.of(context).push(
-//                      MaterialPageRoute(builder: (_) => FaqPage())),
+                  onTap: () {
+                    Navigator.of(context).pushNamed('/faq');
+                  }
                 ),
                 Divider(),
               ],
